@@ -1,0 +1,53 @@
+{
+  "name": "context-kit",
+  "version": "0.1.0",
+  "description": "A minimal, framework-agnostic toolkit for Context Engineering",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example:minimal": "tsx examples/basic/00_minimal.ts",
+    "example:select": "tsx examples/basic/01_select_tools.ts",
+    "example:memory": "tsx examples/basic/02_memory.ts",
+    "example:compress-rules": "tsx examples/basic/03_compress_rules.ts",
+    "example:compress-model": "tsx examples/basic/04_compress_model.ts"
+  },
+  "keywords": [
+    "context-engineering",
+    "llm",
+    "ai",
+    "agents",
+    "tools"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.0.0",
+    "vitest": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": "^0.85.0",
+    "openai": "^6.33.0"
+  },
+  "peerDependenciesMeta": {
+    "openai": {
+      "optional": true
+    },
+    "@anthropic-ai/sdk": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "dotenv": "^17.4.1"
+  }
+}
